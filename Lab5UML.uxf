@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>231</x>
+      <y>22</y>
+      <w>528</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+/Encryptable/
+--
+_START_CHAR_
+_END_CHAR_
+_RANGE_
+--
++encrypt(input: String) : String 
++decrypt(input: String) : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>33</x>
+      <y>220</y>
+      <w>253</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>VigenereCipher
+--
+~encryption.ciphers
+-key: String
+--
++VigenereCipher(password: String) 
++encrypt(input: String): String 
++decrypt(input: String): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>726</x>
+      <y>231</y>
+      <w>253</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>CaesarCipher
+--
+~encryption.ciphers
+-key: int
+--
++CaeserCipher(shift: int) 
++encrypt(input: String): String 
++decrypt(input: String): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>308</x>
+      <y>264</y>
+      <w>396</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Lab5Test
+--
+~encryption
+-input: Scanner
+-encryptedText: ArrayList&lt;String&gt;
+--
++getEncryptedText() ArrayList&lt;String&gt;
++setEncryptedText(ArrayList&lt;String&gt;)
++Lab5test()
+-getMenuItem(options: String...): in 
+-getString(prompt:String): String
+-getInt(prompt:String): int
++main(arg: String) void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>66</x>
+      <y>363</y>
+      <w>143</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>UML designed 
+by Hamza El Sousi
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>627</x>
+      <y>176</y>
+      <w>308</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>66</x>
+      <y>176</y>
+      <w>297</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+</diagram>
