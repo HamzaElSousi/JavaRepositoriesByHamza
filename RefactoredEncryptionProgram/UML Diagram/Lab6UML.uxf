@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>189</y>
+      <w>207</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>/AbstractClass/
+/EncyptionType/
+--
+~encyption.EncyptionType
+-
+_#START_CHAR_
+_#END_CHAR_
+_#RANGE_
+--
++encrypt(input: String) : String 
++decrypt(input: String) : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>225</x>
+      <y>153</y>
+      <w>216</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>VigenereCipher
+--
+~encryption.ciphers
+-key: String
+--
++VigenereCipher(password: String) 
++encrypt(input: String): String 
++decrypt(input: String): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>729</x>
+      <y>153</y>
+      <w>180</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>CaesarCipher
+--
+~encryption.ciphers
+-key: int
+--
++CaeserCipher(shift: int) 
++encrypt(input: String): String 
++decrypt(input: String): String
+#shiftChar</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>0</y>
+      <w>234</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Lab6Test
+--
+~default package
+-input: Scanner
+-encryptedText: ArrayList&lt;String&gt;
+--
++main(args:String[])
++getEncryptedText() ArrayList&lt;String&gt;
++setEncryptedText(ArrayList&lt;String&gt;)
++Lab6test()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>171</x>
+      <y>9</y>
+      <w>117</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>UML designed 
+by Hamza El Sousi
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>585</x>
+      <y>0</y>
+      <w>207</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>ScannerUtils
+--
+~encyption.EncyptionType
+-
+-variables 
+-
+methods
+-getMenuItem(options: String...): int
+-getString(prompt:String): String
+-getInt(prompt:String): int
+#shiftChar
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>135</y>
+      <w>72</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>60.0;10.0;60.0;30.0;10.0;30.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>198</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>198</y>
+      <w>54</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>729</x>
+      <y>297</y>
+      <w>189</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>CaesarCipherTest
+--
+~testing
+--
++testEncrypt_caesarShift5(5) 
++testEncrypt_caesarShift10(10) 
++testEncrypt_caesarShift21(21)
++testEncrypt_caesarShift21(25) 
++testDecrypt_caesarShift3(3)
++testDecrypt_caesarShift5(5)
++testDecrypt_caesarShift21(21)
++testDecrypt_caesarShift10(10) 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>162</x>
+      <y>297</y>
+      <w>279</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>VigenereCipherTest
+--
+~testing
+--
++testEncrypt1_bulkTest_passwordTest(test)
++testEncrypt2_StringTest_passwordLab6(Lab6)
++testEncrypt3_PasswordCheese(cheese) 
++testEncrypt4_PasswordSmile(Smile)
++testDecrypt_bulkTest(test)
++testDecrypt1_passwordDjavb(DJAVB)
++testDecrypt2_passwordUknown(unknown)
++testDecrypt3_passwordLab6(Lab6)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>333</y>
+      <w>189</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>AllTestSuite
+--
+~testing
+--
++CaesarCipherTest.class
++VigenereCipherTest.class</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>378</y>
+      <w>99</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;30.0;10.0;30.0;70.0;90.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>378</y>
+      <w>54</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;70.0;20.0;70.0;20.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>405</x>
+      <y>261</y>
+      <w>81</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;30.0;50.0;30.0;50.0;100.0;70.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>252</y>
+      <w>99</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>90.0;10.0;60.0;10.0;60.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>270</y>
+      <w>27</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>261</x>
+      <y>261</y>
+      <w>27</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+</diagram>
